@@ -101,7 +101,7 @@ public class CityConnect {
 		 * That is why we use an Error instead of an Exception.
 		 * ====================================================================
 		 */
-	}
+
 
 	/*
 	 * ==============NOTE TO STUDENTS======================================

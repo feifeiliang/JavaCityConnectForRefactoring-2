@@ -67,9 +67,9 @@ public class CityConnect {
 	private static final int PARAM_SIZE_FOR_GET_DISTANCE = 2;
 
 	// These are the locations at which various parameters will appear in a command
-	private static final int PARAM_POSITION_START_LOCATION = 0;
-	private static final int PARAM_POSITION_END_LOCATION = 1;
-	private static final int PARAM_POSITION_DISTANCE = 2;
+	private static final int POSITION_START_LOCATION = 0;
+	private static final int POSITION_END_LOCATION = 1;
+	private static final int POSITION_DISTANCE = 2;
 
 	// This array will be used to store the routes
 	private static String[][] route = new String[10][3];
@@ -78,9 +78,9 @@ public class CityConnect {
 	 * These are the locations at which various components of the route will be
 	 * stored in the routes[][] array.
 	 */
-	private static final int STORAGE_POSITION_START_LOCATION = 0;
-	private static final int STORAGE_POSITION_END_LOCATION = 1;
-	private static final int STORAGE_POSITION_DISTANCE = 2;
+	//private static final int STORAGE_POSITION_START_LOCATION = 0;
+	//private static final int STORAGE_POSITION_END_LOCATION = 1;
+	//private static final int STORAGE_POSITION_DISTANCE = 2;
 
 	/*
 	 * This variable is declared for the whole class (instead of declaring it
@@ -195,8 +195,8 @@ public class CityConnect {
 			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
 		}
 
-		String newStartLocation = parameters[PARAM_POSITION_START_LOCATION];
-		String newEndLocation = parameters[PARAM_POSITION_END_LOCATION];
+		String newStartLocation = parameters[POSITION_START_LOCATION];
+		String newEndLocation = parameters[POSITION_END_LOCATION];
 
 		int position = getPositionOfExistingRoute(newStartLocation, newEndLocation);
 
@@ -207,7 +207,7 @@ public class CityConnect {
 		else 
 		{
 			return String.format(MESSAGE_DISTANCE, newStartLocation, newEndLocation,
-					route[position][STORAGE_POSITION_DISTANCE]);
+					route[position][POSITION_DISTANCE]);
 		}
 
 	}
@@ -220,8 +220,8 @@ public class CityConnect {
 			String newEndLocation) {
 		for (int i = 0; i < route.length; i++) {
 
-			String existing_start_location = route[i][STORAGE_POSITION_START_LOCATION];
-			String existing_end_location = route[i][STORAGE_POSITION_END_LOCATION];
+			String existing_start_location = route[i][POSITION_START_LOCATION];
+			String existing_end_location = route[i][POSITION_END_LOCATION];
 
 			if (existing_start_location == null) { //beginning of empty slots
 				return NOT_FOUND; 
@@ -250,9 +250,9 @@ public class CityConnect {
 			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
 		}
 
-		String newStartLocation = parameters[PARAM_POSITION_START_LOCATION];
-		String newEndLocation = parameters[PARAM_POSITION_END_LOCATION];
-		String distance = parameters[PARAM_POSITION_DISTANCE];
+		String newStartLocation = parameters[POSITION_START_LOCATION];
+		String newEndLocation = parameters[POSITION_END_LOCATION];
+		String distance = parameters[POSITION_DISTANCE];
 
 		if (!isPositiveNonZeroInt(distance)){
 			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
@@ -273,9 +273,9 @@ public class CityConnect {
 
 	private static void addRouteAtPosition(String newStartLocation,
 			String newEndLocation, String distance, int entryPosition) {
-		route[entryPosition][STORAGE_POSITION_START_LOCATION] = newStartLocation;
-		route[entryPosition][STORAGE_POSITION_END_LOCATION] = newEndLocation;
-		route[entryPosition][STORAGE_POSITION_DISTANCE] = distance;
+		route[entryPosition][POSITION_START_LOCATION] = newStartLocation;
+		route[entryPosition][POSITION_END_LOCATION] = newEndLocation;
+		route[entryPosition][POSITION_DISTANCE] = distance;
 	}
 
 	/**
@@ -288,8 +288,8 @@ public class CityConnect {
 		
 		for (int i = 0; i < route.length; i++) {
 
-			String existingStartLocation = route[i][STORAGE_POSITION_START_LOCATION];
-			String existingEndLocation = route[i][STORAGE_POSITION_END_LOCATION];
+			String existingStartLocation = route[i][POSITION_START_LOCATION];
+			String existingEndLocation = route[i][POSITION_END_LOCATION];
 
 			if (existingStartLocation == null) { // empty slot
 				return i;

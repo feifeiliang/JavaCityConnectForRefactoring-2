@@ -94,18 +94,6 @@ public class CityConnect {
 
 	
 
-	/*
-	 * ==============NOTE TO STUDENTS==========================================
-	 * If the reader wants a deeper understanding of the solution, he/she can 
-	 * go to the next level of abstraction by reading the methods (given below)
-	 * that is referenced by the method above.
-	 * ====================================================================
-	 */
-
-	private static void showToUser(String text) {
-		System.out.println(text);
-	}
-
 	
 		/*
 		 * ==============NOTE TO STUDENTS======================================
@@ -347,4 +335,17 @@ public class CityConnect {
 		String[] parameters = commandParametersString.trim().split("\\s+");
 		return parameters;
 	}
+	/*
+	 * ==============NOTE TO STUDENTS==========================================
+	 * If the reader wants a deeper understanding of the solution, he/she can 
+	 * go to the next level of abstraction by reading the methods (given below)
+	 * that is referenced by the method above.
+	 * ====================================================================
+	 */
+
+	private static void showToUser(String text) {
+		System.out.println(text);
+	}
+
+	
 }

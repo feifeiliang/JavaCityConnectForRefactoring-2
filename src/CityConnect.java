@@ -106,27 +106,7 @@ public class CityConnect {
 		System.out.println(text);
 	}
 
-	public static String executeCommand(String userCommand) {
-		if (userCommand.trim().equals(""))
-			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
-
-		String commandTypeString = getFirstWord(userCommand);
-
-		COMMAND_TYPE commandType = determineCommandType(commandTypeString);
-
-		switch (commandType) {
-		case ADD_ROUTE:
-			return addRoute(userCommand);
-		case GET_DISTANCE:
-			return getDistance(userCommand);
-		case INVALID:
-			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
-		case EXIT:
-			System.exit(0);
-		default:
-			//throw an error if the command is not recognized
-			throw new Error("Unrecognized command type");
-		}
+	
 		/*
 		 * ==============NOTE TO STUDENTS======================================
 		 * If the rest of the program is correct, this error will never be thrown.
@@ -166,6 +146,27 @@ public class CityConnect {
 			return COMMAND_TYPE.INVALID;
 		}
 	}
+	public static String executeCommand(String userCommand) {
+		if (userCommand.trim().equals(""))
+			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
+
+		String commandTypeString = getFirstWord(userCommand);
+
+		COMMAND_TYPE commandType = determineCommandType(commandTypeString);
+
+		switch (commandType) {
+		case ADD_ROUTE:
+			return addRoute(userCommand);
+		case GET_DISTANCE:
+			return getDistance(userCommand);
+		case INVALID:
+			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
+		case EXIT:
+			System.exit(0);
+		default:
+			//throw an error if the command is not recognized
+			throw new Error("Unrecognized command type");
+		}
 
 	/**
 	 * This operation is used to find the distance between two locations

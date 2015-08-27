@@ -294,7 +294,11 @@ public class CityConnect {
 				|| (startLocation1.equalsIgnoreCase(endLocation2) && endLocation1
 						.equalsIgnoreCase(startLocation2));
 	}
-
+/*	
+	private static String invalidFormat(String userCommand) {
+	    return String.format(MESSAGE_INVALID_FORMAT, userCommand);
+	  }
+*/
 	private static boolean isPositiveNonZeroInt(String s) {
 		try {
 			int i = Integer.parseInt(s);

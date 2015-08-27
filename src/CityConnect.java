@@ -71,8 +71,7 @@ public class CityConnect {
 	private static final int POSITION_END_LOCATION = 1;
 	private static final int POSITION_DISTANCE = 2;
 
-	// This array will be used to store the routes
-	private static String[][] route = new String[10][3];
+	
 
 	/*
 	 * These are the locations at which various components of the route will be
@@ -81,6 +80,9 @@ public class CityConnect {
 	//private static final int STORAGE_POSITION_START_LOCATION = 0;
 	//private static final int STORAGE_POSITION_END_LOCATION = 1;
 	//private static final int STORAGE_POSITION_DISTANCE = 2;
+	
+	// This array will be used to store the routes
+		private static String[][] route = new String[10][3];
 
 	/*
 	 * This variable is declared for the whole class (instead of declaring it

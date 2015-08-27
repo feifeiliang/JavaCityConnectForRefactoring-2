@@ -243,7 +243,7 @@ public class CityConnect {
 		if (!isPositiveNonZeroInt(distance)){
 			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
 		}
-
+// all the NO_SPACE error can be do with a try catch statment
 		int slotPosition = location(newStartLocation, newEndLocation);
 
 		if (slotPosition == SLOT_UNAVAILABLE){

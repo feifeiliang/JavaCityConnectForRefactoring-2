@@ -92,23 +92,7 @@ public class CityConnect {
 	 */
 	private static Scanner scanner = new Scanner(System.in);
 
-	/*
-	 * ==============NOTE TO STUDENTS======================================
-	 * Notice how this method solves the whole problem at a very high level. We
-	 * can understand the high-level logic of the program by reading this method
-	 * alone.
-	 * ====================================================================
-	 */
-	public static void main(String[] args) {
-		showToUser(WELCOME_MESSAGE);
-		while (true) {
-			System.out.print("Enter command:");
-			String command = scanner.nextLine();
-			String userCommand = command;
-			String feedback = executeCommand(userCommand);
-			showToUser(feedback);
-		}
-	}
+	
 
 	/*
 	 * ==============NOTE TO STUDENTS==========================================
@@ -327,6 +311,23 @@ public class CityConnect {
 			return (i > 0 ? true : false);
 		} catch (NumberFormatException nfe) {
 			return false;
+		}
+	}
+	/*
+	 * ==============NOTE TO STUDENTS======================================
+	 * Notice how this method solves the whole problem at a very high level. We
+	 * can understand the high-level logic of the program by reading this method
+	 * alone.
+	 * ====================================================================
+	 */
+	public static void main(String[] args) {
+		showToUser(WELCOME_MESSAGE);
+		while (true) {
+			System.out.print("Enter command:");
+			String command = scanner.nextLine();
+			String userCommand = command;
+			String feedback = executeCommand(userCommand);
+			showToUser(feedback);
 		}
 	}
 

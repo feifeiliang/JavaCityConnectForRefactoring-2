@@ -154,7 +154,8 @@ public class CityConnect {
 	private static COMMAND_TYPE determineCommandType(String commandTypeString) {
 		if (commandTypeString == null)
 			throw new Error("command type string cannot be null!");
-
+// can use switch method
+		
 		if (commandTypeString.equalsIgnoreCase("addroute")) {
 			return COMMAND_TYPE.ADD_ROUTE;
 		} else if (commandTypeString.equalsIgnoreCase("getdistance")) {

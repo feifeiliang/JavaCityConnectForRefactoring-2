@@ -167,7 +167,7 @@ public class CityConnect {
 			//throw an error if the command is not recognized
 			throw new Error("Unrecognized command type");
 		}
-
+	}
 	/**
 	 * This operation is used to find the distance between two locations
 	 * 
@@ -212,7 +212,8 @@ public class CityConnect {
 			String existing_end_location = route[i][POSITION_END_LOCATION];
 
 			if (existing_start_location == null) { //beginning of empty slots
-				return NOT_FOUND; 
+				return NOT_FOUND;
+				// can use break instead of an error message;
 			} else if (sameRoute(existing_start_location, existing_end_location,
 					newStartLocation, newEndLocation)) { 
 				return i;
